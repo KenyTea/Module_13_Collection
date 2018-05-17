@@ -41,7 +41,7 @@ namespace Module_13_Collection
             Mycollection.WriteCollection(col);
 
             //----------------------------------------------------//
-
+            #region Queue
             Queue<int> qe = new Queue<int>();
             Random r = new Random();
             for (int i = 0; i < 10; i++)
@@ -63,6 +63,24 @@ namespace Module_13_Collection
             {
                 Console.WriteLine(item);
             }
+            #endregion
+            //----------------------------------------------------//
+
+            Stack<char> st = new Stack<char>();
+            st.Push('a');
+            st.Push('b');
+            st.Push('c');
+            st.Push('d');
+
+            Console.WriteLine("Исходная очередь");
+            foreach (char item in st)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine(" ");
+            Console.WriteLine("Счёт " + st.Count);
+            Console.WriteLine("Удаление " + st.Pop());
+
         }
     }
 }
