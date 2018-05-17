@@ -26,6 +26,7 @@ namespace Module_13_Collection
 
             public static void WriteCollection(ArrayList arr)
             {
+                Console.WriteLine("ArrayList");
                 foreach (var item in arr)
                 {
                     Console.WriteLine(item);
@@ -39,8 +40,21 @@ namespace Module_13_Collection
             ArrayList col = Mycollection.NewCollection(8);
             Mycollection.WriteCollection(col);
 
+            //----------------------------------------------------//
 
-
+            Queue<int> qe = new Queue<int>();
+            Random r = new Random();
+            for (int i = 0; i < 10; i++)
+            {
+                qe.Enqueue(i);
+            }
+          
+            Console.WriteLine("Очередь");
+            foreach (int item in qe)
+            {
+                Console.WriteLine(item);
+            }
+            qe.Dequeue();
         }
     }
 }
