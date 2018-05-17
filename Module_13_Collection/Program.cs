@@ -54,7 +54,15 @@ namespace Module_13_Collection
             {
                 Console.WriteLine(item);
             }
+
             qe.Dequeue();
+
+            Console.WriteLine(" \n");
+            Console.WriteLine("Очередь - 0");
+            foreach (int item in qe)
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }
