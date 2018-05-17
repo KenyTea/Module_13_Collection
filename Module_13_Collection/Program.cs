@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Module_13_Collection
 {
+    #region Class ArrayList
     class Program
     {
         public class Mycollection
@@ -34,12 +35,13 @@ namespace Module_13_Collection
                 Console.WriteLine(" \n");
             }
         }
-
+        #endregion
         static void Main(string[] args)
         {
+            #region ArrayList
             ArrayList col = Mycollection.NewCollection(8);
             Mycollection.WriteCollection(col);
-
+            #endregion
             //----------------------------------------------------//
             #region Queue
             Queue<int> qe = new Queue<int>();
@@ -48,7 +50,7 @@ namespace Module_13_Collection
             {
                 qe.Enqueue(i);
             }
-          
+
             Console.WriteLine("Очередь");
             foreach (int item in qe)
             {
@@ -65,7 +67,7 @@ namespace Module_13_Collection
             }
             #endregion
             //----------------------------------------------------//
-
+            #region Stack
             Stack<char> st = new Stack<char>();
             st.Push('a');
             st.Push('b');
@@ -80,7 +82,17 @@ namespace Module_13_Collection
             Console.WriteLine(" ");
             Console.WriteLine("Счёт " + st.Count);
             Console.WriteLine("Удаление " + st.Pop());
-
+            #endregion
+            //----------------------------------------------------//
+            #region Dictionary
+            Dictionary<int, string> m = new Dictionary<int, string>();
+            m.Add(1, "Test");
+            Console.WriteLine("\n");
+            foreach (var item in m)
+            {
+                Console.WriteLine(item.Value + " - "+ item.Key); 
+            }
+            #endregion
         }
     }
 }
