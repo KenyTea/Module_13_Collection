@@ -84,14 +84,18 @@ namespace Module_13_Collection
             Console.WriteLine("Удаление " + st.Pop());
             #endregion
             //----------------------------------------------------//
-            #region Dictionary
+            #region class Dictionary
             Dictionary<int, string> m = new Dictionary<int, string>();
             m.Add(1, "Test");
             Console.WriteLine("\n");
             foreach (var item in m)
             {
-                Console.WriteLine(item.Value + " - "+ item.Key); 
+                Console.WriteLine("Value: "+ item.Value + " - "+ "Key: " + item.Key); 
             }
+            #endregion
+            //----------------------------------------------------//
+            #region SortedList
+            // как и Dictionary, только сортирует 
             #endregion
         }
     }
